@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  target-node1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: target_node1
+    ports:
+      - "2222:22"
+    networks:
+      - ansible_network
+
+  target-node2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: target_node2
+    ports:
+      - "2223:22"
+    networks:
+      - ansible_network
+
+networks:
+  ansible_network:
+    driver: bridge

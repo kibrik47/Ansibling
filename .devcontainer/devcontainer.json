@@ -1,0 +1,15 @@
+{
+    "name": "Ansible Development Container",
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    "remoteUser": "ansibleuser",
+    "extensions": [
+      "ms-azuretools.vscode-docker",
+      "ms-vscode-remote.remote-containers"
+    ],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "sudo service ssh start"
+  }
+  

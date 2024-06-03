@@ -1,0 +1,6 @@
+---
+- name: Test connectivity to target nodes
+  hosts: target_nodes
+  tasks:
+    - name: Ping target nodes
+      ansible.builtin.ping:
